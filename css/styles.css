@@ -1,0 +1,34 @@
+#main {
+  width: 58%;
+  padding: 1%;
+  margin: 1%;
+  height: 400px;
+  float: left;
+  background-color: red;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box
+}
+
+#side {
+  width: 38%;
+  padding:1%;
+  margin: 1%;
+  height: 400px;
+  float: right;
+  background-color: blue;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box
+}
+
+@media all and (max-width:500px) {
+  #main {
+    float: none;
+    width: 98%
+  }
+  #side {
+    float: none;
+    width: 98%
+  }
+}/* end of media query */
