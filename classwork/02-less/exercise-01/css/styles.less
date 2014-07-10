@@ -1,0 +1,68 @@
+/*** Variables ***/
+@mainColor: #ff1122;
+@mainBack: #1122ff;
+@mainBorder: gray;
+@standardBorder: 1px solid @mainBorder;
+@standardPadding: 10px 20px;
+@funPadding:10px;
+@roundedCorners: 20px 10px;
+
+/*** Mixins ***/
+.mainSection {
+	border:@standardBorder;
+	padding:@standardPadding;
+}
+
+.specialRound {
+	-webkit-border-radius:@roundedCorners;
+	-moz-border-radius:@roundedCorners;
+	border-radius:@roundedCorners;
+}
+
+/*** Standard */
+h1 {
+	color:@mainColor;
+}
+
+#header {
+	.specialRound;
+	.mainSection;
+	background:@mainBack;
+}
+
+#footer {
+	.mainSection;
+}
+
+h2 {
+	color:lighten(@mainColor, 20%);
+}
+
+strong {
+	color:darken(@mainColor, 20%);
+}
+
+#content {
+	background: #abc + #0f0;
+	padding:@funPadding + 10 @funPadding;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
