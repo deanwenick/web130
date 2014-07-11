@@ -10,7 +10,9 @@
   position:relative;
   margin: 0 auto;
 }
-
+.clear{
+  clear:both;
+}
 #main-menu li  {
   float:left;
 }
@@ -60,7 +62,7 @@ header{
   -webkit-box-sizing: border-box;
 }
 
-#main{
+#left{
   width: 58%;
   padding: 1%;
   margin: 1%;
@@ -70,6 +72,7 @@ header{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box
+    clear:both;
 }
 
 #side{
@@ -96,7 +99,7 @@ footer{
 }
 
 @media all and (max-width: 768px) and (min-width: 461px) {
-  #main{
+  #left{
     width: 56%;
     background-color: pink:
   }
@@ -109,7 +112,7 @@ footer{
   header h2{
     display:none;
   }
-  #main{
+  #left{
     float: none;
     width: 98%;
     padding: 2%;
