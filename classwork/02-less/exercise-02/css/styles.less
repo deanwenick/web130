@@ -1,0 +1,116 @@
+
+@import "imports.less";
+
+h1 {
+    color: darken(@color, 20%);
+}
+
+h2 { 
+    color: darken(@color, 10%);
+}
+
+h3 {
+    color: @color;
+}
+
+h4 {
+    color: lighten(@color, 10%);
+}
+
+/*
+.title(@color) when (lightness(@color) < 50%) {
+    color:@color;
+    background:#fff;
+}
+*/
+.title(@color) {
+    color:@color;
+    background:#fff;
+}
+
+.title(@color) when (lightness(@color) >= 50%) {
+    color:@color;
+    background:#000;
+}
+
+.title(@_) {
+    padding:10px;
+}
+
+h1 {
+    .title(#ff1493);
+}
+
+
+.para(correct)
+{
+    border:1px solid green; 
+}
+
+.para(incorrect)
+{
+    border:1px solid red;
+}
+
+.para(@_)
+{
+    padding:10px;
+}
+
+@state : sdfa;
+p {
+    .para(@state);
+}
+
+
+.borderRadius(@radius : 5px) {
+    -mox-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.subHeading(@color : deepPink, @fontSize : 18px)
+{
+    color: @color;
+    font-size: @fontSize;   
+}
+
+h2 {
+    .subHeading();
+}
+
+h2.special {
+    .subHeading(blue, 18px);
+}
+
+header {
+    .borderRadius;
+    border:@standardBorder;
+    padding:@sectionPadding;
+    background:#fff;
+}
+
+footer {
+    .borderRadius(10px);
+    border:@standardBorder;
+    padding:@sectionPadding;
+    background:#abc;
+}
+
+#content {
+    width:960px;
+    margin:auto;
+}
+
+
+
+a {
+    color:@linkColor;
+
+    &:hover {
+        color:darken(@linkColor, 20%);
+    }
+}
+
+
