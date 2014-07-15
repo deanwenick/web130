@@ -1,0 +1,31 @@
+@import "imports.less";
+
+h1{
+  color: darken(@color, 20%)
+}
+
+h2{
+  color: darken(@color, 10%)
+}
+
+h3{
+  color: @color
+}
+
+h4{
+  color: lighten(@color, 10%)
+}
+
+.borderRadius(@radius: 5px){
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -ms-border-radius: @radius;
+  border-radius: @radius;
+}
+
+header {
+  .borderRadius;
+  border: @standardBorder;
+  padding: @sectionPadding;
+  background: #fff
+}
