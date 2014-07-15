@@ -1,4 +1,3 @@
-
 @import "imports.less";
 
 h1 {
@@ -14,19 +13,15 @@ h3 {
 }
 
 h4 {
-    color: lighten(@color, 10%);
+    color: lighten(@color, 40%);
 }
 
-/*
+
 .title(@color) when (lightness(@color) < 50%) {
     color:@color;
     background:#fff;
 }
-*/
-.title(@color) {
-    color:@color;
-    background:#fff;
-}
+
 
 .title(@color) when (lightness(@color) >= 50%) {
     color:@color;
@@ -41,25 +36,13 @@ h1 {
     .title(#ff1493);
 }
 
-
-.para(correct)
-{
-    border:1px solid green; 
-}
-
-.para(incorrect)
-{
-    border:1px solid red;
-}
-
-.para(@_)
+.para
 {
     padding:10px;
 }
 
-@state : sdfa;
 p {
-    .para(@state);
+    .para;
 }
 
 
