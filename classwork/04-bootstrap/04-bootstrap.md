@@ -7,6 +7,16 @@ Bootstrap
 
 set up your file structure for this project and put the bootstrap js and css files in the correct places
 
+```
+04-bootstrap
+  js
+    bootstrap.js
+  css
+    bootstrap.css
+  index.html
+  ex2.html
+```
+
 create an index.html file like the one in this folder
 
 We'll do the demo together
