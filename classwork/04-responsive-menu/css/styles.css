@@ -77,6 +77,6 @@ a {
 
 .nav li li li a{
   background: #249578;
-  z-index;
-  border-top: 1px solid #1d7a02;
+  z-index:100;
+  border-top: 1px solid #1d7a62;
 }
