@@ -52,7 +52,7 @@ a {
 }
 
 .nav > li {
-  flaot: left;
+  float: left;
   border-top: 1px solid #104336;
   z-index: 100;
 }
@@ -79,4 +79,16 @@ a {
   background: #249578;
   z-index:100;
   border-top: 1px solid #1d7a62;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav > li.hover > ul {
+  left:0;
+}
+.nav > li li.hover > ul {
+  left: 100%;
+  top: 0;
 }
