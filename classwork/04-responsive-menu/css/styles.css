@@ -80,3 +80,16 @@ a {
   z-index: 200;
   border-top: 1px solid #1d7a62;
 }
+
+.nav li {
+  position: relative;
+}
+
+.nav > li.hover > ul {
+  left: 0;
+}
+
+.nav li li.hover ul {
+  left: 100%;
+  top: 0;
+}
