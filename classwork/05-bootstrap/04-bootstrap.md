@@ -1,7 +1,7 @@
 Bootstrap
 ======
 
-[Twitter Bootstrap] () slides for today.
+Twitter Bootstrap slides will be available next class
 
 [Download] (https://github.com/twbs/bootstrap/archive/v3.2.0.zip) the **Source Code** .zip from [getbootstrap.com] (http://getbootstrap.com)
 
