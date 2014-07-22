@@ -5,6 +5,8 @@ This project builds a responsive, dropdown menu
 
 Last class we left off with a partially completed menu
 
+This [repo http://github.com/deanwenick/menu] (http://github.com/deanwenick/menu) is where we left off
+
 For this class, let's all start with the same code. It is exactly where I left off. Even if your code is the same do the following exercise so we all start at the same place. You can go back and work with your old code later, if you like.
 
 We are going to clone a repository into your classwork directory. This can make for a complicated git repo. There are several ways to do this depending on your end goal. Our goal is just to bring n some new code. We do not need to track changes in the original repo so our steps will be:
