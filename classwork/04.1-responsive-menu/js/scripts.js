@@ -10,9 +10,16 @@ $(document).ready(function(){
     if ( $(this).next().length > 0 ) {
       $(this).addClass("parent");
     }
-  });
+  });     
   
-    if (ww < 800) {
+  adjustMenu();
+ 
+});//end document.ready function
+
+// call function on page load and on windows resize
+function adjustMenu() {
+  
+   if (ww < 800) {
     $(".toggleMenu").css("display", "inline-block");
     $(".nav").hide();
     $(".nav li a").click(function() {
@@ -26,13 +33,12 @@ $(document).ready(function(){
       $(this).removeClass("hover");
     });
    } 
- 
-});//end document.ready function
+}
 
-
-
-
-
-
+// call adjustMenu() on window resize
+$(window).bind('resize orientationchange', function() {
+  ww = window.body.clientWidth;
+  adjustMenu();
+});
 
 
