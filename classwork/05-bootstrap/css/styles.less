@@ -1,0 +1,13 @@
+@myGrey : #abc;
+
+h1 {
+	color: @myGrey;
+}
+
+h2 {
+	color: lighten(@myGrey, 20%);
+}
+
+div, aside {
+    border: 1px solid darken(@myGrey, 20%);
+}
