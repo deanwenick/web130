@@ -1,8 +1,11 @@
+var ww = document.body.clientWidth;
 $(document).ready(function(){
-  var ww = document.body.clientWidth;
+
   
   $(".toggleMenu").click(function(e) {
     e.preventDefault();
+    // add active calss for styling
+    $(this).toggleClass('active');
     $(".nav").toggle();
   });
   
@@ -17,23 +20,45 @@ $(document).ready(function(){
 });//end document.ready function
 
 // call function on page load and on windows resize
-function adjustMenu() {
+var adjustMenu = function() {
   
    if (ww < 800) {
     $(".toggleMenu").css("display", "inline-block");
-    $(".nav").hide();
-    $(".nav li a").click(function() {
-      $(this).parent("li").toggleClass("hover");
+     
+     // add condition to show/hide btn if btn active
+     if (!$(".toggleMenu").hasClass("active")) {
+       $(".nav").hide();
+     } else {
+       $(".nav").show();
+     }
+     
+     //unbind events on small screen
+     $(".nav li").unbind('mouseenter mouseleave');
+     $("nav li a.parent").unbind('click').bind('click', function(e) {
+       //attached to anchor element to prevent bubbling
+       e.preventDefault();
+       $(this).parent("li").toggleClass("hover");
     });
   } else {
     $("toggleMenu").css("display", "none");  
-    $(".nav li").hover(function() {
-      $(this).addClass("hover");
-    }, function() {
-      $(this).removeClass("hover");
+    
+    //show nav on resize
+    $(".nav").show();
+    
+    $(".nav li").removeClass("hover");
+    $(".nav li a").unbind('click');
+    $(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function(){
+      $(this).toggleClass('hover');
     });
+    
+    
+//     $(".nav li").hover(function() {
+//       $(this).addClass("hover");
+//     }, function() {
+//       $(this).removeClass("hover");
+//     });
    } 
-}
+};
 
 // call adjustMenu() on window resize
 $(window).bind('resize orientationchange', function() {
