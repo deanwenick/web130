@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML Canvas</title>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <script type="text/javascript">
+    function draw() {
+      var canvas = document.getElementById("drawing");
+      var context = canvas.getContext("2d");
+      if(!context) return;
+      
+      //draw a rectangle
+      context.fillStyle = "#f00";
+      context.fillRect(25,50,40,20);
+      
+      //put astroke around the rectangle
+      context.strokeStyle = "000";
+      context.strokeRect(24.5,49.5,40,20);
+      
+      //draw a circle
+      context.beginPath();
+      context.arc(150,75,15,0,2 * Math.PI, true);
+      context.closePath();
+      context.fillStyle = "#0f0";
+      context.fill();
+      
+    }
+  </script>
+</head>
+<body onload="draw();">
+
+  <canvas id="drawing" width="300px" height="300px">
+    Your browser does not support the canvas element
+   </canvas>
+
+</body>
+</html>
