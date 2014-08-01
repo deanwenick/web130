@@ -1,0 +1,16 @@
+.background {
+  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  margin: 10px;
+}
+
+img {
+  display: none;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  padding: 15px;
+}

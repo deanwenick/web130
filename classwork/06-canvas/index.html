@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Canvas</title>
+    <link rel='stylesheet' href="css/styles.css">
+    <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+      function draw1(){
+        var canvas = document.getElementById('tutorial1');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          // drawing code here
+
+          /*  Step 1 - red & blue box */
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10,10,55,50);
+
+          ctx.fillStyle = "rgba(0,0,200,0.5)";
+          ctx.fillRect(30,30,55,50);
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw2(){
+        var canvas = document.getElementById('tutorial2');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 2 - clearRect */
+          ctx.fillRect(25,25,100,100);
+          ctx.clearRect(45,45,60,60);
+          ctx.strokeRect(50,50,50,50);
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw3(){
+        var canvas = document.getElementById('tutorial3');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 3 - Triangle*/
+          ctx.beginPath();
+          ctx.moveTo(75,50);
+          ctx.lineTo(100,75);
+          ctx.lineTo(100,25);
+          ctx.fill();
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw4(){
+        var canvas = document.getElementById('tutorial4');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 4 - Happy Face */
+          ctx.beginPath();
+          ctx.arc(75,75,70,0,Math.PI*2,true); // Outer circle
+          ctx.moveTo(110,75);
+          ctx.arc(75,75,35,0,Math.PI,false); //Mouth (clockwise)
+          ctx.moveTo(65,65);
+          ctx.arc(60,65,5,0,Math.PI*2,true); // Left eye
+          ctx.moveTo(95,65);
+          ctx.arc(90,65,5,0,Math.PI*2,true); // Right eye
+          ctx.stroke();
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw5(){
+        var canvas = document.getElementById('tutorial5');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 5 - Ying Yang Triangles */
+
+          // Filled Triangle
+          ctx.beginPath();
+          ctx.moveTo(25,25);
+          ctx.lineTo(105,25);
+          ctx.lineTo(25,105);
+          ctx.fill();
+
+          // Stroked Triangle
+          ctx.beginPath();
+          ctx.moveTo(125,125);
+          ctx.lineTo(125,45);
+          ctx.lineTo(45,125);
+          ctx.closePath();
+          ctx.stroke();
+
+
+
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw6() {
+        var canvas = document.getElementById('tutorial6');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+
+          for(var i=0;i<4;i++){
+            for(var j=0;j<3;j++){
+              ctx.beginPath();
+              var x              = 25+j*50;               // x coordinate
+              var y              = 25+i*50;               // y coordinate
+              var radius         = 20;                    // Arc radius
+              var startAngle     = 0;                     // Starting point on circle
+              var endAngle       = Math.PI+(Math.PI*j)/2; // End point on circle
+              var anticlockwise  = i%2==0 ? false : true; // clockwise or anticlockwise
+
+              ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+
+              if (i>1){
+                ctx.fill();
+              } else {
+                ctx.stroke();
+              }
+            }
+          }
+        }
+      }
+
+      function draw7(){
+        var canvas = document.getElementById('tutorial7');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 7 - Chat bubble */
+
+          ctx.beginPath();
+          ctx.moveTo(75,25);
+          ctx.quadraticCurveTo(25,25,25,62.5);
+          ctx.quadraticCurveTo(25,100,50,100);
+          ctx.quadraticCurveTo(50,120,30,125);
+          ctx.quadraticCurveTo(60,120,65,100);
+          ctx.quadraticCurveTo(125,100,125,62.5);
+          ctx.quadraticCurveTo(125,25,75,25);
+          ctx.stroke();
+
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw8(){
+        var canvas = document.getElementById('tutorial8');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 8 - Heart */
+
+          ctx.beginPath();
+          ctx.moveTo(75,40);
+          ctx.bezierCurveTo(75,37,70,25,50,25);
+          ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+          ctx.bezierCurveTo(20,80,40,102,75,120);
+          ctx.bezierCurveTo(110,102,130,80,130,62.5);
+          ctx.bezierCurveTo(130,62.5,130,25,100,25);
+          ctx.bezierCurveTo(85,25,75,37,75,40);
+          ctx.fill();
+
+        } else {
+          // canvas-unsupported code here
+          return;
+        }
+      }
+
+      function draw9() {
+        var canvas = document.getElementById('tutorial9');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          /* Step 9 - Pac-Man! */
+
+          roundedRect(ctx,12,12,150,150,15);
+          roundedRect(ctx,19,19,150,150,9);
+          roundedRect(ctx,53,53,49,33,10);
+          roundedRect(ctx,53,119,49,16,6);
+          roundedRect(ctx,135,53,49,33,10);
+          roundedRect(ctx,135,119,25,49,10);
+
+          ctx.beginPath();
+          ctx.arc(37,37,13,Math.PI/7,-Math.PI/7,false);
+          ctx.lineTo(31,37);
+          ctx.fill();
+
+          for(var i=0;i<8;i++){
+            ctx.fillRect(51+i*16,35,4,4);
+          }
+
+          for(i=0;i<6;i++){
+            ctx.fillRect(115,51+i*16,4,4);
+          }
+
+          for(i=0;i<8;i++){
+            ctx.fillRect(51+i*16,99,4,4);
+          }
+
+          ctx.beginPath();
+          ctx.moveTo(83,116);
+          ctx.lineTo(83,102);
+          ctx.bezierCurveTo(83,94,89,88,97,88);
+          ctx.bezierCurveTo(105,88,111,94,111,102);
+          ctx.lineTo(111,116);
+          ctx.lineTo(106.333,111.333);
+          ctx.lineTo(101.666,116);
+          ctx.lineTo(97,111.333);
+          ctx.lineTo(92.333,116);
+          ctx.lineTo(87.666,111.333);
+          ctx.lineTo(83,116);
+          ctx.fill();
+
+          ctx.fillStyle = "white";
+          ctx.beginPath();
+          ctx.moveTo(91,96);
+          ctx.bezierCurveTo(88,96,87,99,87,101);
+          ctx.bezierCurveTo(87,103,88,106,91,106);
+          ctx.bezierCurveTo(94,106,95,103,95,101);
+          ctx.bezierCurveTo(95,99,94,96,91,96);
+          ctx.moveTo(103,96);
+          ctx.bezierCurveTo(100,96,99,99,99,101);
+          ctx.bezierCurveTo(99,103,100,106,103,106);
+          ctx.bezierCurveTo(106,106,107,103,107,101);
+          ctx.bezierCurveTo(107,99,106,96,103,96);
+          ctx.fill();
+
+          ctx.fillStyle = "black";
+          ctx.beginPath();
+          ctx.arc(101,102,2,0,Math.PI*2,true);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(89,102,2,0,Math.PI*2,true);
+          ctx.fill();
+        }
+      }
+
+      // A utility function to draw a rectangle with rounded corners.
+
+      function roundedRect(ctx,x,y,width,height,radius){
+        ctx.beginPath();
+        ctx.moveTo(x,y+radius);
+        ctx.lineTo(x,y+height-radius);
+        ctx.quadraticCurveTo(x,y+height,x+radius,y+height);
+        ctx.lineTo(x+width-radius,y+height);
+        ctx.quadraticCurveTo(x+width,y+height,x+width,y+height-radius);
+        ctx.lineTo(x+width,y+radius);
+        ctx.quadraticCurveTo(x+width,y,x+width-radius,y);
+        ctx.lineTo(x+radius,y);
+        ctx.quadraticCurveTo(x,y,x,y+radius);
+        ctx.stroke();
+      }
+
+      function draw10() {
+        var ctx = document.getElementById('tutorial10').getContext('2d');
+        var img = new Image();
+        img.onload = function(){
+          ctx.drawImage(img,0,0);
+          ctx.beginPath();
+          ctx.moveTo(30,96);
+          ctx.lineTo(70,66);
+          ctx.lineTo(103,76);
+          ctx.lineTo(170,15);
+          ctx.stroke();
+        };
+        img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+      }
+
+      function draw11() {
+        var ctx = document.getElementById('tutorial11').getContext('2d');
+        var img = new Image();
+        img.onload = function(){
+          for (var i=0;i<4;i++){
+            for (var j=0;j<3;j++){
+              ctx.drawImage(img,j*50,i*38,50,38);
+            }
+          }
+        };
+        img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+      }
+
+      function draw12() {
+        var canvas = document.getElementById('tutorial12');
+        var ctx = canvas.getContext('2d');
+
+        // Draw slice
+        ctx.drawImage(document.getElementById('source'),
+                      33, 71, 104, 124, 21, 20, 87, 104);
+
+        // Draw frame
+        ctx.drawImage(document.getElementById('frame'),0,0);
+      }
+      function draw13() {
+
+        // Loop through all images
+        for (var i=0;i<document.images.length;i++){
+
+          // Don't add a canvas for the frame image
+          if (document.images[i].getAttribute('id')!='frame'){
+
+            // Create canvas element
+            canvas = document.createElement('canvas');
+            canvas.setAttribute('width',132);
+            canvas.setAttribute('height',150);
+
+            // Insert before the image
+            document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+
+            ctx = canvas.getContext('2d');
+
+            // Draw image to canvas
+            ctx.drawImage(document.images[i],15,20);
+
+            // Add frame
+            ctx.drawImage(document.getElementById('frame'),0,0);
+          }
+        }
+      }
+
+      function draw14() {
+        var ctx = document.getElementById('tutorial14').getContext('2d');
+        for (var i=0;i<6;i++){
+          for (var j=0;j<6;j++){
+            ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
+              Math.floor(255-42.5*j) + ',0)';
+            ctx.fillRect(j*25,i*25,25,25);
+          }
+        }
+      }
+
+      function draw15() {
+        var ctx = document.getElementById('tutorial15').getContext('2d');
+        for (var i=0;i<6;i++){
+          for (var j=0;j<6;j++){
+            ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + 
+              Math.floor(255-42.5*j) + ')';
+            ctx.beginPath();
+            ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
+            ctx.stroke();
+          }
+        }
+      }
+
+      function draw16() {
+        var ctx = document.getElementById('tutorial16').getContext('2d');
+        // draw background
+        ctx.fillStyle = '#FD0';
+        ctx.fillRect(0,0,75,75);
+        ctx.fillStyle = '#6C0';
+        ctx.fillRect(75,0,75,75);
+        ctx.fillStyle = '#09F';
+        ctx.fillRect(0,75,75,75);
+        ctx.fillStyle = '#F30';
+        ctx.fillRect(75,75,75,75);
+        ctx.fillStyle = '#FFF';
+
+        // set transparency value
+        ctx.globalAlpha = 0.2;
+
+        // Draw semi transparent circles
+        for (i=0;i<7;i++){
+          ctx.beginPath();
+          ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
+          ctx.fill();
+        }
+      }
+      function draw17() {
+        var ctx = document.getElementById('tutorial17').getContext('2d');
+
+        // Draw background
+        ctx.fillStyle = 'rgb(255,221,0)';
+        ctx.fillRect(0,0,150,37.5);
+        ctx.fillStyle = 'rgb(102,204,0)';
+        ctx.fillRect(0,37.5,150,37.5);
+        ctx.fillStyle = 'rgb(0,153,255)';
+        ctx.fillRect(0,75,150,37.5);
+        ctx.fillStyle = 'rgb(255,51,0)';
+        ctx.fillRect(0,112.5,150,37.5);
+
+        // Draw semi transparent rectangles
+        for (var i=0;i<10;i++){
+          ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
+          for (var j=0;j<4;j++){
+            ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
+          }
+        }
+      }
+
+      function draw18() {
+        var ctx = document.getElementById('tutorial18').getContext('2d');
+        for (var i = 0; i < 10; i++){
+          ctx.lineWidth = 1+i;
+          ctx.beginPath();
+          ctx.moveTo(5+i*14,5);
+          ctx.lineTo(5+i*14,140);
+          ctx.stroke();
+        }
+      }
+
+      function draw19() {
+        var ctx = document.getElementById('tutorial19').getContext('2d');
+        var lineCap = ['butt','round','square'];
+
+        // Draw guides
+        ctx.strokeStyle = '#09f';
+        ctx.beginPath();
+        ctx.moveTo(10,10);
+        ctx.lineTo(140,10);
+        ctx.moveTo(10,140);
+        ctx.lineTo(140,140);
+        ctx.stroke();
+
+        // Draw lines
+        ctx.strokeStyle = 'black';
+        for (var i=0;i<lineCap.length;i++){
+          ctx.lineWidth = 15;
+          ctx.lineCap = lineCap[i];
+          ctx.beginPath();
+          ctx.moveTo(25+i*50,10);
+          ctx.lineTo(25+i*50,140);
+          ctx.stroke();
+        }
+      }
+
+      function draw20() {
+        var ctx = document.getElementById('tutorial20').getContext('2d');
+        var lineJoin = ['round','bevel','miter'];
+        ctx.lineWidth = 10;
+        for (var i=0;i<lineJoin.length;i++){
+          ctx.lineJoin = lineJoin[i];
+          ctx.beginPath();
+          ctx.moveTo(-5,5+i*40);
+          ctx.lineTo(35,45+i*40);
+          ctx.lineTo(75,5+i*40);
+          ctx.lineTo(115,45+i*40);
+          ctx.lineTo(155,5+i*40);
+          ctx.stroke();
+        }
+      }
+      function draw21() {
+        var ctx = document.getElementById('tutorial21').getContext('2d');
+
+        // Clear canvas
+        ctx.clearRect(0,0,150,150);
+
+        // Draw guides
+        ctx.strokeStyle = '#09f';
+        ctx.lineWidth   = 2;
+        ctx.strokeRect(-5,50,160,50);
+
+        // Set line styles
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 10;
+
+        // check input
+        if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
+          ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+        } else {
+          alert('Value must be a positive number');
+        }
+
+        // Draw lines
+        ctx.beginPath();
+        ctx.moveTo(0,100);
+        for (i=0;i<24;i++){
+          var dy = i%2==0 ? 25 : -25 ;
+          ctx.lineTo(Math.pow(i,1.5)*2,75+dy);
+        }
+        ctx.stroke();
+        return false;
+      }
+
+      function draw22() {
+        var ctx = document.getElementById('tutorial22').getContext('2d');
+
+        // Create gradients
+        var lingrad = ctx.createLinearGradient(0,0,0,150);
+        lingrad.addColorStop(0, '#00ABEB');
+        lingrad.addColorStop(0.5, '#fff');
+        lingrad.addColorStop(0.5, '#26C000');
+        lingrad.addColorStop(1, '#fff');
+
+        var lingrad2 = ctx.createLinearGradient(0,50,0,95);
+        lingrad2.addColorStop(0.5, '#000');
+        lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
+
+        // assign gradients to fill and stroke styles
+        ctx.fillStyle = lingrad;
+        ctx.strokeStyle = lingrad2;
+
+        // draw shapes
+        ctx.fillRect(10,10,130,130);
+        ctx.strokeRect(50,50,50,50);
+      }
+      
+      function draw23() {
+  var ctx = document.getElementById('tutorial23').getContext('2d');
+
+  // Create gradients
+  var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+  radgrad.addColorStop(0, '#A7D30C');
+  radgrad.addColorStop(0.9, '#019F62');
+  radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+  
+  var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
+  radgrad2.addColorStop(0, '#FF5F98');
+  radgrad2.addColorStop(0.75, '#FF0188');
+  radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+
+  var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
+  radgrad3.addColorStop(0, '#00C9FF');
+  radgrad3.addColorStop(0.8, '#00B5E2');
+  radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+
+  var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
+  radgrad4.addColorStop(0, '#F4F201');
+  radgrad4.addColorStop(0.8, '#E4C700');
+  radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+  
+  // draw shapes
+  ctx.fillStyle = radgrad4;
+  ctx.fillRect(0,0,150,150);
+  ctx.fillStyle = radgrad3;
+  ctx.fillRect(0,0,150,150);
+  ctx.fillStyle = radgrad2;
+  ctx.fillRect(0,0,150,150);
+  ctx.fillStyle = radgrad;
+  ctx.fillRect(0,0,150,150);
+}
+      function draw24() {
+  var ctx = document.getElementById('tutorial24').getContext('2d');
+
+  // create new image object to use as pattern
+  var img = new Image();
+  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+  img.onload = function(){
+
+    // create pattern
+    var ptrn = ctx.createPattern(img,'repeat');
+    ctx.fillStyle = ptrn;
+    ctx.fillRect(0,0,150,150);
+
+  }
+}
+      function draw25() {
+  var ctx = document.getElementById('tutorial25').getContext('2d');
+
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+  ctx.shadowBlur = 2;
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+ 
+  ctx.font = "20px Times New Roman";
+  ctx.fillStyle = "Black";
+  ctx.fillText("Sample String", 5, 30);
+}
+
+    </script>
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+    </style>
+  </head>
+  <body onload="draw1(); draw2(); draw3(); draw4(); draw5(); draw6(); draw7(); draw8(); draw9(); draw10(); draw11(); draw12(); draw13(); draw14(); draw15(); draw16(); draw17(); draw18(); draw19(); draw20(); draw21(); draw22(); draw23(); draw24(); draw25();">
+    <canvas id="tutorial1" width="150" height="150"></canvas>
+    <canvas id="tutorial2" width="150" height="150"></canvas>
+    <canvas id="tutorial3" width="150" height="150"></canvas>
+    <canvas id="tutorial4" width="150" height="150"></canvas>
+    <canvas id="tutorial5" width="150" height="150"></canvas>
+    <canvas id="tutorial6" width="150" height="200"></canvas>
+    <canvas id="tutorial7" width="150" height="150"></canvas>
+    <canvas id="tutorial8" width="150" height="150"></canvas>
+    <canvas id="tutorial9" width="150" height="150"></canvas>
+    <canvas id="tutorial10" width="150" height="150"></canvas>
+    <canvas id="tutorial11" width="150" height="150"></canvas>
+    <canvas id="tutorial12" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+      <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+    </div>
+    <div class="background">
+      <table>
+        <tr>
+          <td><img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"></td>
+          <td><img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"></td>
+          <td><img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"></td>
+          <td><img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"></td>
+        </tr>
+        <tr>
+          <td><img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"></td>
+          <td><img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"></td>
+          <td><img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"></td>
+          <td><img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"></td>
+        </tr>
+      </table>
+      <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+    </div>
+    <canvas id="tutorial14" width="150" height="150"></canvas>
+    <canvas id="tutorial15" width="150" height="150"></canvas>
+    <canvas id="tutorial16" width="150" height="150"></canvas>
+    <canvas id="tutorial17" width="150" height="150"></canvas>
+    <canvas id="tutorial18" width="150" height="150"></canvas>
+    <canvas id="tutorial19" width="150" height="150"></canvas>
+    <canvas id="tutorial20" width="150" height="150"></canvas>
+    <canvas id="tutorial21" width="150" height="150"></canvas>
+    <canvas id="tutorial22" width="150" height="150"></canvas>
+    <canvas id="tutorial23" width="150" height="150"></canvas>
+    <canvas id="tutorial24" width="150" height="150"></canvas>
+    <canvas id="tutorial25" width="150" height="150"></canvas>
+
+
+
+  </body>
+</html>
