@@ -7,6 +7,15 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   <script type="text/javascript">
+    function draw() {
+      draw1();
+      draw2();
+      draw3();
+      draw4();
+      draw5();
+      draw6();
+    }
+    
     function draw1() {
       var canvas = document.getElementById('tutorial1');
 
@@ -52,6 +61,81 @@
         return;
       }
     }
+      
+    function draw4() {
+      var canvas = document.getElementById('tutorial4');
+      if(canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        ctx.strokeStyle = "#f00";
+        ctx.beginPath();
+        ctx.arc(75,75,50,0, Math.PI * 2, true);//outer circle
+        ctx.moveTo(110,75);
+        ctx.arc(75,75,35,0, Math.PI, false);// mouth(clockwise)
+        ctx.moveTo(65,65);
+        ctx.arc(60,65,5,0, Math.PI * 2, true);// left eye
+        ctx.moveTo(95,65);
+        ctx.arc(90,65,5,0, Math.PI * 2, true);// right eye      
+        ctx.stroke();
+
+      } else {
+        return;
+      }
+    }
+    
+    function draw5() {
+      var canvas = document.getElementById('tutorial5');
+      if(canvas.getContext) {
+        //draw triangles
+        var ctx = canvas.getContext('2d');
+        //filled triangle
+        ctx.beginPath();
+        ctx.moveTo(25,25);
+        ctx.lineTo(105,25);
+        ctx.lineTo(25,105);
+        ctx.fill();
+        
+        //draw open triangle
+        ctx.beginPath();
+        ctx.moveTo(125,125);
+        ctx.lineTo(125,45);
+        ctx.lineTo(45,125);
+        ctx.closePath();
+        ctx.stroke();
+        
+      } else {
+        return;
+      }
+    }
+    
+    function draw6() {
+      var canvas = document.getElementById('tutorial6');
+      if(canvas.getContext) {
+        //make arcs
+        var ctx = canvas.getContext('2d');
+        
+        for (var i = 0; i < 4; i++) {
+          for (var j = 0; j < 3; j++) {
+            ctx.beginPath();
+            var x = 25 + j * 50;
+            var y = 25 + i * 50;
+            var radius = 20;
+            var startAngle = 0;
+            var endAngle = Math.PI + (Math.PI * j)/2;
+            var anticlockwise = i % 2 === 0 ? false : true;
+
+            ctx.arc(x,y,radius,startAngle,endAngle,anticlockwise);
+            
+            if (i > 1) {
+              ctx.fill();
+            } else {
+            ctx.stroke();
+            }
+          }
+        }
+      } else {
+        return;
+      }
+    }
   </script>
   <style type="text/css">
     canvas {
@@ -59,7 +143,7 @@
     }
   </style>
 </head>
-<body onload="draw1(); draw2(); draw3();">
+<body onload="draw()">
   <canvas id="tutorial1" width="150px" height="150px">
     Your browser does not support the canvas element
    </canvas>
@@ -69,6 +153,18 @@
    </canvas>
   
   <canvas id="tutorial3" width="150px" height="150px">
+    Your browser does not support the canvas element
+   </canvas>
+  
+  <canvas id="tutorial4" width="150px" height="150px">
+    Your browser does not support the canvas element
+   </canvas>
+  
+  <canvas id="tutorial5" width="150px" height="150px">
+    Your browser does not support the canvas element
+   </canvas>
+  
+  <canvas id="tutorial6" width="150px" height="200px">
     Your browser does not support the canvas element
    </canvas>
 

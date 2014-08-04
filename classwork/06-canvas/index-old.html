@@ -17,16 +17,16 @@
       context.fillRect(25,50,40,20);
       
       //put astroke around the rectangle
-      context.strokeStyle = "000";
+      context.strokeStyle = "#000";
       context.strokeRect(24.5,49.5,40,20);
       
       //draw a circle
       context.beginPath();
+      //arc(x, y, radius, startAngle, endAngle, anticlockwise)
       context.arc(150,75,15,0,2 * Math.PI, true);
       context.closePath();
       context.fillStyle = "#0f0";
       context.fill();
-      
     }
   </script>
 </head>
