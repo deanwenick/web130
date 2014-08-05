@@ -36,4 +36,7 @@ Below are some well respected style guides to help you make formatting decisions
 - [jQuery HTML Style Guide] (http://contribute.jquery.org/style-guide/html/)
 - [Meteor JavaScript Style Guide] (https://github.com/meteor/meteor/wiki/Meteor-Style-Guide)
 
+[slides for 07-form-validation] (https://docs.google.com/presentation/d/1EyBqxOmEmMFGRFbxR7FAbmNUFKReYws6KsE6FK-euhY/edit?usp=sharing)
+
+
 
