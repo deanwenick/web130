@@ -23,3 +23,17 @@ We will use [Nitrous.io] (https://www.nitrous.io/join/qfBk_biWT4g) for our devel
 7. enter github username and password
 8. navigate to github repo to verify 
 
+### Style Guides
+
+consistent formatting of your code is essential to being taken seriously as a web designer and/or developer  
+your employer will have specific style guidelines for how you format and comment your code  
+this class does not use a specific styleguide, but your code should still look nice  
+computers don't care what your code looks like, e.g. minified code is called "uglified"  
+Below are some well respected style guides to help you make formatting decisions for your own code
+
+- [Google HTML/CSS Style Guide] (https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
+- [Github CSS Style Guide] (https://github.com/styleguide/css)
+- [jQuery HTML Style Guide] (http://contribute.jquery.org/style-guide/html/)
+- [Meteor JavaScript Style Guide] (https://github.com/meteor/meteor/wiki/Meteor-Style-Guide)
+
+
