@@ -22,7 +22,18 @@
     }
     
     function validateForm() {
-      alert("validating");
+      var fname = document.getElementById("first-name").value;
+      var errorSpan = document.getElementById("error-first-name");
+      
+      if(fname === "") {
+        //show error and stay
+        errorSpan.className = "error";
+        return false;
+      } else {
+        //hide error and succeed
+        errorSpan.className = "hidden";
+        return true;
+      }
     }
     
   </script>
