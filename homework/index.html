@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>forms homework</title>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>   
+  <form action="success.html" id="contact-form">
+    <p>
+      <label for="first-name">First name:
+        <input type="text" name="first-name" id="first-name" required>
+      </label>
+    </p>
+    <p>
+      <label for="zipcode">zipcode:
+        <input type="text" name="zipcode" id="zipcode" data-parsley-type="digits" data-parsley-length="[5,5]" required>
+      </label>
+    </p>
+    <button type="submit" name="submit" id="submit" value="submit">Submit</button>
+        
+  </form>
+  <script type="text/javascript">
+    $("#contact-form").parsley();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
