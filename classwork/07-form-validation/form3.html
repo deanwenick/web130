@@ -23,8 +23,11 @@
     
     function validateForm() {
       var validFirstName = validateTextField("first-name", "error-first-name");
+      var validLastName = validateTextField("last-name", "error-last-name");
+      var validPhone = validateTextField("phone", "error-phone");
+      var validTerms = validateCheckBox();
       
-      return validFirstName;
+      return validFirstName && validLastName && validPhone && validTerms;
       
     }
     
@@ -34,6 +37,22 @@
       var errorSpan = document.getElementById(errorId);
       
       if(fieldText === "") {
+        //show error and stay
+        errorSpan.className = "error";
+        return false;
+      } else {
+        //hide error and succeed
+        errorSpan.className = "hidden";
+        return true;
+      }
+    }
+    
+    function validateCheckBox(){
+      //take a parameter and test any text field
+      var checkBox = document.getElementById('terms');
+      var errorSpan = document.getElementById("error-terms");
+      
+      if(!checkBox.checked) {
         //show error and stay
         errorSpan.className = "error";
         return false;
@@ -62,7 +81,7 @@
       </label>
     </p>
     <p>
-      <label for="phone">First Name:
+      <label for="phone">Phone:
         <input type="text" name="phone" id="phone">
         <span id="error-phone" class="hidden">* Blank</span>     
       </label>
@@ -70,7 +89,7 @@
     <p>
       <label for="terms">
         <input type="checkbox" id="terms" name="terms">I Agree
-        <span id="error-first-name" class="hidden">* You must agree</span>
+        <span id="error-terms" class="hidden">* You must agree</span>
       </label>
     </p>
     <button name="submit" id="submit">Submit</button>
