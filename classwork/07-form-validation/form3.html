@@ -22,10 +22,18 @@
     }
     
     function validateForm() {
-      var fname = document.getElementById("first-name").value;
-      var errorSpan = document.getElementById("error-first-name");
+      var validFirstName = validateTextField("first-name", "error-first-name");
       
-      if(fname === "") {
+      return validFirstName;
+      
+    }
+    
+    function validateTextField(fieldId, errorId){
+      //take a parameter and test any text field
+      var fieldText = document.getElementById(fieldId).value;
+      var errorSpan = document.getElementById(errorId);
+      
+      if(fieldText === "") {
         //show error and stay
         errorSpan.className = "error";
         return false;
@@ -35,6 +43,7 @@
         return true;
       }
     }
+    
     
   </script>
 </head>
