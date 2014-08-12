@@ -102,7 +102,7 @@
         var validFood = validateCheckbox("food1","food2","food3","food4", "error-food");
         var validCar = validateRadio (document.forms["contact-form"]["car"], "error-car");
 
-        return validFirst && validLast && validAddress && validCity && validZip && validEmail && validEmail2 && validFood;
+        return validFirst && validLast && validAddress && validCity && validZip && validEmail && validEmail2 && validFood && validCar;
       }
     </script>
   </head>
@@ -113,13 +113,21 @@
     <h2 class="name">Contact Forrest</h2>
     </header>
     
-    <nav class="main">
+    <nav id="main-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="#">Classwork</a>
+          <ul>
+            <li><a href="classwork/01-css-dropdown">Dropdowns</a></li>
+            <li><a href="classwork/02-less/exercise1">LESS css 1</a></li>
+            <li><a href="classwork/02-less/exercise2">LESS css 2</a></li>
+          </ul>
+        </li>
       </ul>
-    </nav>
+    </nav> 
+    <div class="clear"></div>
     
     <div id="left">
 <!--       
