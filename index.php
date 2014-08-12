@@ -5,14 +5,14 @@
   </head>
   <body>
     <header>
-    <h1>Web 130</h1>
-    <h2>Forrest McIntyre</h2>
+      <h1>Web 130</h1>
+      <h2>Forrest McIntyre</h2>
     </header>
     <nav id="main-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="#">Classwork</a>
           <ul>
             <li><a href="classwork/01-css-dropdown">Dropdowns</a></li>
