@@ -36,29 +36,23 @@
       // otherwise go directly to the success page with no alert
       if (firstName == "") {
         fNameError.className = "error";
-//         return false; // don't go to the next page
       } else {
         fNameError.className = "hidden";
-//         return true; // go to the next page
       }
       if (lastName == "") {
         lNameError.className = "error";
-//         return false; // don't go to the next page
       } else {
         lNameError.className = "hidden";
-//         return true; // go to the next page
       }
       if (phone == "") {
         phoneError.className = "error";
-//         return false; // don't go to the next page
       } else {
         phoneError.className = "hidden";
-//         return true; // go to the next page
       }
       if (phone != "" && lastName != "" && firstName != "" ){
-        return true;
+        return true; // go to the next page
       } else {
-        return false;
+        return false; // don't go to the next page
       }
       
       
@@ -79,7 +73,7 @@
       </p>
       <p>
         <label for="phone">Phone:</label>
-        <input name="phone" id="phone" type="text">
+        <input name="phone" id="phone" type="phone">
         <span id="error-phone" class="error hidden">* Error</span>
       </p>
       <p>
