@@ -18,8 +18,13 @@ a {
 }
 
 .toggleMenu {
+<<<<<<< HEAD
   display: none;
   background: #666;
+=======
+  display:none;
+  background:#666;
+>>>>>>> upstream/master
   padding: 10px 15px;
   color: #fff;
 }
@@ -54,7 +59,11 @@ a {
 .nav > li {
   float: left;
   border-top: 1px solid #104336;
+<<<<<<< HEAD
   z-index: 200;
+=======
+  z-index: 100;
+>>>>>>> upstream/master
 }
 
 .nav > li > a {
@@ -63,8 +72,13 @@ a {
 
 .nav li ul {
   position: absolute;
+<<<<<<< HEAD
   left: -9999px;
   z-index: 100;
+=======
+  left:-9999px;
+  z-index:100;
+>>>>>>> upstream/master
 }
 
 .nav li li a {
@@ -72,12 +86,21 @@ a {
   background: #1d7a62;
   position: relative;
   z-index: 100;
+<<<<<<< HEAD
   border-top: 1px solid #175e4c;
 }
 
 .nav li li li a {
   background: #249578;
   z-index: 200;
+=======
+  border-top: 1px solid #175e4c
+}
+
+.nav li li li a{
+  background: #249578;
+  z-index:100;
+>>>>>>> upstream/master
   border-top: 1px solid #1d7a62;
 }
 
@@ -86,9 +109,14 @@ a {
 }
 
 .nav > li.hover > ul {
+<<<<<<< HEAD
   left: 0;
 }
 
+=======
+  left:0;
+}
+>>>>>>> upstream/master
 .nav li li.hover ul {
   left: 100%;
   top: 0;
@@ -96,13 +124,18 @@ a {
 
 @media screen and (max-width: 800px) {
   .nav > li {
+<<<<<<< HEAD
     float: none;
+=======
+    float:none;
+>>>>>>> upstream/master
   }
   .nav ul {
     display: block;
     width: 100%;
   }
   .nav > li.hover > ul, .nav li li.hover ul {
+<<<<<<< HEAD
     position: static;
   }
 }
@@ -124,3 +157,8 @@ a {
 
 
 
+=======
+    position:  static;
+  }
+}
+>>>>>>> upstream/master

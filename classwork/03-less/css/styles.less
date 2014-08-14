@@ -1,5 +1,6 @@
 @import "config.less";
 
+<<<<<<< HEAD
 /* @font-face {
     font-family: 'asapregular';
     src: url('../../../fonts/asap-regular-webfont.eot');
@@ -16,25 +17,56 @@
     src: url('../../../fonts/asap-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+=======
+@font-face {
+   font-family: 'asapregular';  
+    src:url('../../../../fonts/asap-regular-webfont.eot');  
+    src:url('../../../../fonts/asap-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+    url('../../../../fonts/asap-regular-webfont.woff') format('woff'),  
+    url('../../../../fonts/asap-regular-webfont.ttf') format('truetype'),  
+    url('../../../../fonts/asap-regular-webfont.svg#AsapRegular') format('svg');  
+    font-weight: normal;  
+    font-style: normal;  
+>>>>>>> upstream/master
 }
 
 body {
   background: lighten(@theme, 30%);
+<<<<<<< HEAD
   font-family: asapregular;
   font-size: 11pt;
 }
 
 nav {
   margin: 50px auto 0;
+=======
+  font-family: 'Asap', sans-serif;
+  font-size:11pt;
+}
+
+nav {
+  margin:50px auto 0;
+>>>>>>> upstream/master
   width: 788px;
   height: 45px;
   .border;
   .shadow;
+<<<<<<< HEAD
   ul {
     padding: 0;
     margin: 0;
     li {
       display: inline;
+=======
+  
+  ul {
+    padding:0;
+    margin:0;
+    
+    li {
+      display:inline;
+      
+>>>>>>> upstream/master
       a {
         text-decoration: none;
         display: inline-block;
@@ -42,12 +74,17 @@ nav {
         width: 156px;
         height: 45px;
         text-align: center;
+<<<<<<< HEAD
         line-height: 300%;
+=======
+        line-height:300%;
+>>>>>>> upstream/master
         .textcolor(#f2f2f2);
         .divider;
         .gradient;
         &:hover {
           .hovereffect;
+<<<<<<< HEAD
         }//end hovereffect
       }//end a
     }//end li
@@ -60,3 +97,18 @@ nav {
   }//end ul
 }//end nav
 
+=======
+        }
+      }
+    }
+    
+    li:first-child a {
+      border-left:none;
+    }
+    
+    li:last-child a {
+      border-right:none;
+    }
+  }
+}
+>>>>>>> upstream/master

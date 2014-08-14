@@ -1,95 +1,13 @@
-<<<<<<< HEAD
-#main {
-  width: 58%;
-  padding: 1%;
-  margin: 1%;
-  height: 400px;
-  float: left;
-  background-color: red;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box
-}
+@nav-color: #778899;
+@desktop-color: #00f;
+@tablet-color: #0f0;
+@phone-color: #f00;
 
-#side {
-  width: 38%;
-  padding:1%;
-  margin: 1%;
-  height: 400px;
-  float: right;
-  background-color: blue;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box
-}
-
-.clear {
-  clear: both
-}
-
-/* Navigation styles */
-#main-menu ul {
-  list-style-type: none;
-  padding-left: 10px;
-  position: relative
-}
-
-#main-menu li {
-  float: left
-}
-
-#main-menu li a {
-  background: #778899;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block
-}
-
-#main-menu li a:hover {
-  background: skyblue;
-  color: black
-}
-
-/* sub menu styles */
-#main-menu ul li ul {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 1s, opacity 1s linear
-}
-
-#main-menu ul li:hover ul {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s
-}
-
-#main-menu ul li ul li {
-  float: none;
-  background: #778899
-}
-
-#main-menu ul li ul li:hover {
-  background: magenta
-}
-
-
-@media all and (max-width:500px) {
-  #main {
-    float: none;
-    width: 98%
-  }
-  #side {
-    float: none;
-    width: 98%
-  }
-}/* end of media query */
-=======
 #main-menu{
   clear:both;
   width:100%;
-
 }
+
 /*Navigation styles*/
 #main-menu ul  {
   list-style-type:none;
@@ -105,7 +23,7 @@
 }
 
 #main-menu li a  {
-  background: #778899;
+  background:@nav-color;
   text-decoration:none;
   padding:10px 20px;
   display:block;
@@ -132,7 +50,7 @@
 
 #main-menu ul li ul li  {
   float:none;
-  background:#778899;
+  background:@nav-color;
 }
 
 #main-menu ul li ul li:hover  {
@@ -153,19 +71,20 @@ header{
   width: 58%;
   padding: 1%;
   margin: 1%;
+  height: 400px;
   float: left;
   background-color: red;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box
     clear:both;
-  overflow:hidden;
 }
 
 #side{
   width: 38%;
   padding: 1%;
   margin: 1%;
+  height: 400px;
   float: right;
   background-color: blue;
   box-sizing: border-box;
@@ -199,7 +118,7 @@ footer{
     display:none;
   }
   #left{
-    float: none;-
+    float: none;
     width: 98%;
     padding: 2%;
     background-color: orange;
@@ -221,4 +140,3 @@ footer{
  }
 }
 /* end of media query */
->>>>>>> upstream/master

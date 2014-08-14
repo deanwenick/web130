@@ -1,8 +1,12 @@
 
 $(document).ready(function(){
 
+<<<<<<< HEAD
   //var ww = document.body.clientWidth;
   var ww = $(window).width();
+=======
+  var ww = document.body.clientWidth;
+>>>>>>> upstream/master
   
   $(".nav li a").each(function() {
     if ( $(this).next().length > 0 ) {

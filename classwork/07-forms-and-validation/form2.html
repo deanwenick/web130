@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>html5 template</title>
+    <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <!-- <script src="js/jquery-2.1.1.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+      .error{
+        font-family: sans-serif;
+        color:red;
+        font-weight:bold;
+        text-transform:uppercase;
+        text-shadow: 2px 2px 1px black;
+      }
+      .hidden{
+        display:none;
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById("contact-form").onsubmit = validateContact;
+      }
+      function validateContact() {
+        var correct = document.getElementById("fav-ice-cream").value;
+        var iceCreamError = document.getElementById("error-fav-ice-cream");
+        // if the enter nothing in the text box
+        // then show and alert, and don't go to success
+        // otherwise go directly to the success page with no alert
+        if(correct.toLowerCase().trim() != "vanilla") {
+          iceCreamError.className = "error";
+          return false; // don't go to the next page
+        } else {
+          iceCreamError.className = "hidden";
+          return true; // go to the next page
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+     <form id="contact-form" action="success.html">
+      <p>
+        <label for="fav-ice-cream">Favorite Ice Cream:</label>
+        <input name="fav-ice-cream" id="fav-ice-cream" type="text">
+        <span id="error-fav-ice-cream" class="error hidden">* Error</span>
+      </p>
+      
+      <input type="submit" name="submit" value="submit">
+  </form>
+  </body>
+</html>

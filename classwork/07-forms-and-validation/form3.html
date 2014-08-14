@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>html5 template</title>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- <script src="js/jquery-2.1.1.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <style>
+    .error{
+      font-family: sans-serif;
+      color:red;
+      font-weight:bold;
+      text-transform:uppercase;
+      text-shadow: 2px 2px 1px black;
+    }
+    .hidden{
+      display:none;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById("contact-form").onsubmit = validateContact;
+    }
+    function validateContact() {
+      var firstName = document.getElementById("first-name").value;
+      var fNameError = document.getElementById("error-first-name");
+      var lastName = document.getElementById("last-name").value;
+      var lNameError = document.getElementById("error-last-name");
+      var phone = document.getElementById("phone").value;
+      var phoneError = document.getElementById("error-phone");
+      // if the enter nothing in the text box
+      // then show and alert, and don't go to success
+      // otherwise go directly to the success page with no alert
+      if (firstName == "") {
+        fNameError.className = "error";
+      } else {
+        fNameError.className = "hidden";
+      }
+      if (lastName == "") {
+        lNameError.className = "error";
+      } else {
+        lNameError.className = "hidden";
+      }
+      if (phone == "") {
+        phoneError.className = "error";
+      } else {
+        phoneError.className = "hidden";
+      }
+      if (phone != "" && lastName != "" && firstName != "" ){
+        return true; // go to the next page
+      } else {
+        return false; // don't go to the next page
+      }
+      
+      
+    }
+  </script>
+</head>
+<body>
+    <form id="contact-form" action="success.html">
+      <p>
+        <label for="first-name">First Name:</label>
+        <input name="first-name" id="first-name" type="text">
+        <span id="error-first-name" class="error hidden">* Error</span>
+      </p>
+      <p>
+        <label for="last-name">Last Name:</label>
+        <input name="last-name" id="last-name" type="text">
+        <span id="error-last-name" class="error hidden">* Error</span>
+      </p>
+      <p>
+        <label for="phone">Phone:</label>
+        <input name="phone" id="phone" type="phone">
+        <span id="error-phone" class="error hidden">* Error</span>
+      </p>
+      <p>
+        <label for="agree">Agree</label>
+        <input type="checkbox" name="agree" id="agree" required />
+      </p>
+      
+      <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+</html>
