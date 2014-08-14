@@ -1,0 +1,34 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	color: #778899;
+}
+
+input, textarea, select {
+	color:#778899;
+	border: 1px solid #6A9CD9;
+	border-radius: 2px;
+}
+
+input[type="email"] {
+	width:170px;
+}
+
+#contact-form label {
+	width:120px;
+	display:inline-block;
+}
+
+#contact-form input.error { 
+	color:magenta; 
+	border: 1px solid #FF1493; 
+}
+
+#contact-form label.error { 
+	display: none; 
+	padding-left:10px;
+	color:#FF1493;
+}
+
+#result {
+	margin-top:10px;
+}

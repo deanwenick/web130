@@ -1,0 +1,42 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+img {
+	float:left;
+}
+
+#cereal_list img {
+	width:100px;
+}
+
+h2 {
+	color:#CD782D;
+	margin:0px;
+}
+
+a {
+	color:#CD782D;
+	text-decoration:none;
+}
+
+p, ul {
+	color:#B2B2B2;
+	margin-top:6px;
+}
+
+.cereal {
+	clear:both;
+	padding:10px 0px 10px 0px;
+}
+
+#cereal_list {
+	float:left;
+}
+
+#description {
+	margin:50px 10px 10px 500px;
+	padding:20px 30px 50px 10px;
+	width:400px;
+	border:5px outset #FEDC51;
+}
