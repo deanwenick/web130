@@ -1,0 +1,20 @@
+.col1of2, .col2of2 {
+	float:left;
+	width:50%;	
+}
+
+.winter #headline {
+	color:#9400D3;	
+}
+
+.winter #instructions {
+	color:#00BFFF;
+}
+
+.summer #headline {
+	color:#DAA520;
+}
+
+.summer #instructions{
+	color:#F08080;
+}

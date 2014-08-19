@@ -4,6 +4,25 @@
 		<title>I love Cereal</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //insert target div
+        //hide target div
+        //show target div when the link is clicked
+        $("#cereal_list").after( "<div id='description'></div>" );
+        $("#description").hide();
+        $(".cereal_title").click(showDescription);
+      });
+      
+      function showDescription(){
+        //show description div
+        //insert cereal details into div
+        $("#description").show();
+        var pageHref = $(this).attr("href");
+        $("#description").load(pageHref);
+        return false;
+      }
+    </script>
 	</head>
 	<body>
 		<h1>Cereal Cereal Cereal</h1>
