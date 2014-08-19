@@ -53,7 +53,19 @@
      
        <p>
          <label for="zip">Zipcode:
-           <input type="text" id="zip" name="zip" data-parsley-required="true" data-parsley-type="digits" data-parsley-minlength="5" data-parsely-maxlength="5">
+           <input type="text" id="zip" name="zip" data-parsley-required="true" data-parsley-type="digits" data-parsley-range="[5, 5]">
+         </label>
+       </p>
+     
+       <p>
+         <label for="email-1">Email:
+           <input type="text" id="email-1" name="email-1" data-parsley-required="true" data-parsley-type="email">
+         </label>
+       </p>
+     
+       <p>
+         <label for="email-2">Re-enter Email:
+           <input type="text" id="email-2" name="email-2" data-parsley-required="true" data-parsley-type="email" data-parsley-equalto="#email-1">
          </label>
        </p>
 
