@@ -20,10 +20,20 @@
  <body>
    
    <form id="myForm" name="myForm" action="form_handler.php" method="POST">
+
+       <p>
+         <label for="fName">First Name:
+           <input type="text" id="fName" name="fName" data-parsley-required="true">
+         </label>
+       </p>
+
      
-     <button type="submit" id="submit" name="submit">Press me to test the form</button>
+     <button type="submit" id="submit" name="submit">Submit</button>
      
    </form>
    
+   <script type="text/javascript">
+     $("#myForm").parsley();
+   </script>
   </body>  
 </html>
