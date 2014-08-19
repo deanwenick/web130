@@ -28,16 +28,26 @@
        </p>
      
        <p>
-         <label for="lname">First Name:
+         <label for="lname">Last Name:
            <input type="text" id="lname" name="lname" data-parsley-required="true">
          </label>
        </p>
      
        <p>
-         <label for="address">First Name:
+         <label for="address">Address:
            <input type="text" id="address" name="address" data-parsley-required="true">
          </label>
        </p>
+     
+     <p>
+       <label for="city">City:
+         <select id="city" data-parsley-required="true">
+          <option value="">Choose..</option>
+          <option value="seattle">Seattle</option>
+          <option value="seatac">Seatac</option>
+          <option value="tacoma">Tacoma</option>
+          <option value="everett">Everett</option>
+        </select>
 
      
      <button type="submit" id="submit" name="submit">Submit</button>
