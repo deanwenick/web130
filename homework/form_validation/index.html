@@ -39,15 +39,23 @@
          </label>
        </p>
      
-     <p>
-       <label for="city">City:
-         <select id="city" data-parsley-required="true">
-          <option value="">Choose..</option>
-          <option value="seattle">Seattle</option>
-          <option value="seatac">Seatac</option>
-          <option value="tacoma">Tacoma</option>
-          <option value="everett">Everett</option>
-        </select>
+       <p>
+         <label for="city">City:
+             <select id="city" data-parsley-required="true">
+              <option value="">Choose..</option>
+              <option value="seattle">Seattle</option>
+              <option value="seatac">Seatac</option>
+              <option value="tacoma">Tacoma</option>
+              <option value="everett">Everett</option>
+            </select>
+         </label>
+       </p>
+     
+       <p>
+         <label for="zip">Zipcode:
+           <input type="text" id="zip" name="zip" data-parsley-required="true" data-parsley-type="digits" data-parsley-minlength="5" data-parsely-maxlength="5">
+         </label>
+       </p>
 
      
      <button type="submit" id="submit" name="submit">Submit</button>
