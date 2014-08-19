@@ -7,16 +7,34 @@
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 		<script>
-
+      $(document).ready(function() {
+            //$("#doStuff").click(showMessage); 
+            $("#myInput").keyup(showMessage);
+       });
 			
+      function showMessage() {
+        //get value from input and load it into target
+         //var myInput = $("#myInput").val();
+        //return alert(myInput);
+        
+        //.html works but we want to load from the server
+        //$("#target").html(myInput);
+        $("#target").load( "poster.php", {
+          data: $(this).val()
+        } );
+      }
 
 		</script>
 
 	</head>
 
 	<body>
+    <h1>Give me a number:</h1>
+    <input id="myInput" type="text">
+    <div id="target"></div>
+    <button id="doStuff">Do Stuff</button>
 
-		
+  </body>
 
 </html>
 

@@ -2,9 +2,27 @@
 
 	<head>
 
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="//code.jquery.com/jquery-latest.js"></script>
 
 		<script>
+      $(document).ready(function(){
+        //document.getElementById("doStuff").
+        $("#doStuff").click(showMessage);
+        $("#doStuff2").click(showMessage2);
+      });
+      
+      function showMessage() {
+        //$("#target").html("boo");
+        $("#target").load("message.txt",null, function(){alert("i am done")} );
+      }
+      
+      function showMessage2() {
+        //$("#target").html("boo");
+        $("#target2").load("message.html #div1");
+        
+        //not working due to same origin policy
+        //$("#target2").load("http://example.com/index.html");
+      }
 
 			
 
@@ -13,7 +31,12 @@
     </head>
 
 	<body>
-
+    <div id="target"></div>
+    <button id="doStuff">Do Stuff</button>
+    
+    
+    <div id="target2"></div>
+    <button id="doStuff2">Do Stuff</button>
 		
 
 	</body>
