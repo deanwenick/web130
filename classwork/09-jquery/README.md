@@ -11,6 +11,15 @@ These sets of slides will be review for some and new for others
 - [events] (http://portiaplante.com/javascript1/lectures/JQuery%20-%20Lecture%203%20-%20Events.pdf), do something when something else happens
 - [animations] (http://portiaplante.com/javascript1/lectures/JQuery%20-%20Lecture4%20-%20Animation.pdf)
 
+## exercise files
+
+[jquery show-hide] (https://drive.google.com/file/d/0B4_8OB8xfvF-bHJ3enVRelJBRlk/edit?usp=sharing)
+[jquery change-image-links] (https://drive.google.com/file/d/0B4_8OB8xfvF-OUdsZlhHZXpxcTQ/edit?usp=sharing)
+
+- Download these (at a time) then upload it to your `09-jquery` folder
+- navigate to the `09-jquery` folder in your console
+- run the command `unzip jquery- <appropriate file name> -.zip`
+
 
 ## other libraries to look at
 
