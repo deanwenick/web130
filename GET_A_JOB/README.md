@@ -79,4 +79,11 @@ Once you get the interview know that you CAN do the job. The interviewer knows y
       3. What are adjectives that describe you
       4. Know why you want pursue this career
       5. Practice the pitch, polish it and keep it under 30 seconds
+      
+### Continue Learning
+
+- [Code School] (http://codeschool.com) free and for pay classes and tutorials
+- [Code Academy] (http://codeacademy.com) free and for pay classes and tutorials
+- [Code Wars] (http://codewars.com) Test yourself, complete challenges and compare your solution to others, includes analytics
+- [Grunt] (http://gruntjs.com) automate your workflow
 
