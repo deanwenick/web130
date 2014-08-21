@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function showHide()
 {
-	if($("#kittens").is(":visible"))	//if the text is visible
+	if( $("#kittens").is(":visible") )	//if the text is visible
 	{
 		$("#show-hide").html("Show");
 	}

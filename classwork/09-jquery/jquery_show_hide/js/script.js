@@ -7,6 +7,8 @@ $(document).ready(function(){
 function doStuff()
 {
     //put "hello in #place-text"
+  //var myh2 = $("h2").html();
+  $("#place-text").html("hello");
 }
 
 function showFlowers()
