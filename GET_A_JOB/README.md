@@ -73,12 +73,20 @@ Once you get the interview know that you CAN do the job. The interviewer knows y
     3. solve problems
     4. overcome obstacles
   - Create an "Elevator Pitch" for yourself
-    - Use the worksheet provided, the gist is:
+    - Use the [worksheet provided] (docs/elevator_pitch_worksheet), the gist is:
       1. Identify your strengths
       2. List your top accomplishments
       3. What are adjectives that describe you
       4. Know why you want pursue this career
       5. Practice the pitch, polish it and keep it under 30 seconds
+      
+The following documents can help you prepare for your interview
+
+- [Amazon interview prep] (docs/Amazon_Interview_Prep.pdf) Solid advice for any interview.
+- [Amazon Leadership Principles] (docs/Amazon_Leadership_Principle.docx) Create a story for yourself about how you embody each of these.
+- [Amazon phone interview prep] (docs/Amazon_Phone_Interview_Prep.pdf) They will send you these, but good for any phone interview.
+- [Candidate interview questions] (docs/Candidate_Interview_Questions.docx) Common questions that you will be asked.
+- [Elevator pitch worksheet] (docs/elevator_pitch_worksheet.pdf) People will ask you about yourself - have a good answer
       
 ### Continue Learning
 
@@ -86,4 +94,7 @@ Once you get the interview know that you CAN do the job. The interviewer knows y
 - [Code Academy] (http://codeacademy.com) free and for pay classes and tutorials
 - [Code Wars] (http://codewars.com) Test yourself, complete challenges and compare your solution to others, includes analytics
 - [Grunt] (http://gruntjs.com) automate your workflow
+- [Code challenges] (docs/Disney_Developer_Code_Challenges.pdf) from Disney
+
+- [Coursera] (https://www.coursera.org/course/learning) helps you learn how to learn
 
